@@ -1,20 +1,19 @@
 # Oh My PowerShell
 
-A delightful, open source, community-driven framework for managing your PowerShell configuration.
+A minimal PowerShell configuration framework for a beautiful terminal experience.
 
 ## Features
 
-- 🚀 **Easy Installation** - Get up and running in seconds
-- 🎨 **Beautiful Themes** - A variety of themes to personalize your terminal
-- 🔌 **Plugin System** - Extend functionality with powerful plugins
-- ⚡ **Auto-completion** - Smart command suggestions and completions
-- 📁 **Directory Navigation** - Quick directory bookmarks and history
-- 🔄 **Git Integration** - Display git status and branch information
+- Easy installation with automatic dependency management
+- Beautiful prompt themes powered by Oh My Posh
+- Automatic Nerd Font installation (supports China mirror)
+- File/folder icons with Terminal-Icons module
+- Windows Terminal color scheme integration
 
 ## Requirements
 
 - Windows PowerShell 5.1+ or PowerShell 7+
-- Git
+- Run as Administrator (for font installation)
 
 ## Installation
 
@@ -22,57 +21,104 @@ A delightful, open source, community-driven framework for managing your PowerShe
 # Clone the repository
 git clone https://github.com/yangjingo/oh-my-powershell.git
 
-# Run the installation script
+# Run the installation script (as Administrator)
 cd oh-my-powershell
 ./install.ps1
 ```
 
-## Quick Start
+### Installation Options
 
-After installation, restart your PowerShell terminal. You'll see a beautiful new prompt!
+```powershell
+# Auto-detect network (default)
+./install.ps1
+
+# Force China mirror mode
+./install.ps1 -ConfigMode CN
+
+# Skip font installation
+./install.ps1 -SkipFont
+
+# Silent mode
+./install.ps1 -Silent
+```
 
 ## Themes
 
-Oh My PowerShell comes with several built-in themes. To list available themes:
+Two custom themes are included:
+
+### Claude Theme (Default)
+
+Warm terracotta palette inspired by Claude Code's aesthetic.
+
+![Claude Theme Preview](./asserts/1shell-claude.png)
 
 ```powershell
-omps theme list
+oh-my-posh init pwsh --config 'C:\path\to\oh-my-powershell\themes\1shell-claude.omp.json' | Invoke-Expression
 ```
 
-To apply a theme:
+### Codex Theme
+
+Tech-focused palette with vibrant colors for high contrast.
+
+![Codex Theme Preview](./asserts/pure-codex.png)
 
 ```powershell
-omps theme use <theme-name>
+oh-my-posh init pwsh --config 'C:\path\to\oh-my-powershell\themes\pure-codex.omp.json' | Invoke-Expression
 ```
 
-## Plugins
+### Switch Themes
 
-Enable plugins in your `$HOME\.omp\config.ps1`:
+Copy the example profile to your PowerShell profile:
 
 ```powershell
-$Plugins = @(
-    "git",
-    "ssh-agent",
-    "history"
-)
+# View your profile path
+$PROFILE
+
+# Copy example profile
+Copy-Item ".\profile.example.ps1" $PROFILE -Force
 ```
 
-## Configuration
+Or edit manually:
 
-Configuration file is located at `$HOME\.omp\config.ps1`.
+```powershell
+notepad $PROFILE
+```
 
-## Contributing
+## Files
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+```
+oh-my-powershell/
+├── install.ps1                 # Installation script
+├── profile.example.ps1         # Example PowerShell profile template
+├── themes/
+│   ├── 1shell-claude.omp.json  # Claude theme (warm terracotta palette)
+│   └── pure-codex.omp.json     # Codex theme (tech-focused vibrant colors)
+├── asserts/
+│   ├── 1shell-claude.png       # Claude theme preview
+│   └── pure-codex.png          # Codex theme preview
+├── oh-my-powershell.json       # Scoop manifest for package distribution
+├── LICENSE
+└── README.md
+```
+
+### File Descriptions
+
+| File | Description |
+|------|-------------|
+| `install.ps1` | Main installation script. Installs oh-my-posh, git, FiraCode Nerd Font, Terminal-Icons module, and configures Windows Terminal. |
+| `profile.example.ps1` | PowerShell profile template. Copy to `$PROFILE` location and customize as needed. |
+| `themes/1shell-claude.omp.json` | Claude theme with warm terracotta colors inspired by Claude Code's aesthetic. |
+| `themes/pure-codex.omp.json` | Codex theme with vibrant tech-focused colors for high contrast readability. |
+| `asserts/` | Theme preview screenshots. |
+| `oh-my-powershell.json` | Scoop manifest for installing via `scoop install`. |
 
 ## License
 
 [MIT License](LICENSE)
 
-## Documentation
-
-- [中文文档](docs/README_zh.md)
-
 ## Acknowledgments
 
-Inspired by [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
+- Inspired by [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- Powered by [Oh My Posh](https://ohmyposh.dev)
+- Icons by [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
+- Fonts by [Nerd Fonts](https://www.nerdfonts.com)

@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "description": "A minimal PowerShell & Windows Terminal beautification solution",
+    "homepage": "https://github.com/yangjingo/oh-my-powershell",
+    "license": "MIT",
+    "url": "https://github.com/yangjingo/oh-my-powershell/archive/refs/heads/main.zip",
+    "depends": [
+        "oh-my-posh",
+        "git"
+    ],
+    "installer": {
+        "script": "powershell -ExecutionPolicy Bypass -File \"$dir\\install.ps1\" -Silent"
+    },
+    "notes": "After installation, please restart your PowerShell or Windows Terminal."
+}
