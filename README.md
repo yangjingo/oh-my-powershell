@@ -2,6 +2,8 @@
 
 A minimal PowerShell configuration framework for a beautiful terminal experience.
 
+[中文文档](./README-ZH.md)
+
 ## Features
 
 - Easy installation with automatic dependency management
@@ -98,7 +100,8 @@ oh-my-powershell/
 │   └── pure-codex.png          # Codex theme preview
 ├── oh-my-powershell.json       # Scoop manifest for package distribution
 ├── LICENSE
-└── README.md
+├── README.md
+└── README-ZH.md                # Chinese documentation
 ```
 
 ### File Descriptions
