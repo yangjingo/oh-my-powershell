@@ -9,13 +9,29 @@
 - 自动安装 Nerd Font 字体（支持国内镜像）
 - Terminal-Icons 模块提供文件/文件夹图标
 - Windows Terminal 配色方案集成
+- **智能 Tab 补全** - 菜单式补全，可视化选择，告别枯燥的命令输入
+- **命令联想预测** - 基于历史记录的智能提示，仿佛有个贴心助手在帮你回忆
+- **历史记忆搜索** - 上下箭头智能过滤，输入几个字符即可快速定位历史命令
 
 ## 系统要求
 
-- Windows PowerShell 5.1+ 或 PowerShell 7+
+- **PowerShell 7+（强烈推荐）** - 尽情体验流畅性能、丰富色彩和增强的交互功能
+- 也支持 Windows PowerShell 5.1，但可能无法呈现最佳的视觉效果和流畅的交互体验
 - 需要以管理员身份运行（用于字体安装）
 
 ## 安装
+
+### AI Agent 快速安装
+
+如果你正在使用 AI 助手（如 Claude），只需说：
+
+```
+clone 这个仓库，帮我安装 claude style 的 oh-my-posh 主题，https://github.com/yangjingo/oh-my-powershell
+```
+
+AI 助手会自动帮你完成整个安装过程 —— 坐下来，享受即可！
+
+### 手动安装
 
 ```powershell
 # 克隆仓库

@@ -11,13 +11,29 @@ A minimal PowerShell configuration framework for a beautiful terminal experience
 - Automatic Nerd Font installation (supports China mirror)
 - File/folder icons with Terminal-Icons module
 - Windows Terminal color scheme integration
+- **Smart Tab Completion** - Menu-style completions with visual selection
+- **Command Prediction** - AI-like suggestions based on your command history
+- **History Search** - Navigate through history with Up/Down arrows, filtered by what you've typed
 
 ## Requirements
 
-- Windows PowerShell 5.1+ or PowerShell 7+
+- **PowerShell 7+ (Strongly Recommended)** - Experience the full potential with smoother performance, richer colors, and enhanced interactive features
+- Windows PowerShell 5.1 is supported but may not deliver the optimal visual effects and seamless interactive experience
 - Run as Administrator (for font installation)
 
 ## Installation
+
+### Quick Install for AI Agents
+
+If you're using an AI assistant (like Claude), simply ask:
+
+```
+clone this repo and help me install the claude style oh-my-posh theme, https://github.com/yangjingo/oh-my-powershell
+```
+
+The AI agent will handle the entire installation process for you - sit back and enjoy!
+
+### Manual Installation
 
 ```powershell
 # Clone the repository
