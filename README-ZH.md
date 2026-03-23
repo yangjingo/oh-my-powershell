@@ -21,9 +21,9 @@
 
 ## 安装
 
-### AI Agent 快速安装
+### ⭐ 使用 AI Agent 快速安装（**推荐**）
 
-如果你正在使用 AI 助手（如 Claude），只需说：
+> **最简单的安装方式！** 使用 AI Agent（如 Claude）自动完成安装：
 
 ```
 clone 这个仓库，帮我安装 claude style 的 oh-my-posh 主题，https://github.com/yangjingo/oh-my-powershell

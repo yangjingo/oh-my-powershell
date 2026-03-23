@@ -23,9 +23,9 @@ A minimal PowerShell configuration framework for a beautiful terminal experience
 
 ## Installation
 
-### Quick Install for AI Agents
+### ⭐ Quick Install with AI Agent (**Recommended**)
 
-If you're using an AI assistant (like Claude), simply ask:
+> **The easiest way to get started!** Use an AI agent (like Claude) to install automatically:
 
 ```
 clone this repo and help me install the claude style oh-my-posh theme, https://github.com/yangjingo/oh-my-powershell
